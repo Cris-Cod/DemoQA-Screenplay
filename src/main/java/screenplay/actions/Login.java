@@ -1,5 +1,7 @@
 package screenplay.actions;
 
+import net.serenitybdd.screenplay.actions.Scroll;
+import net.serenitybdd.screenplay.actions.ScrollTo;
 import screenplay.user_interface.LoginPage;
 import net.serenitybdd.screenplay.Action;
 import net.serenitybdd.screenplay.Actor;
@@ -26,6 +28,7 @@ public class Login implements Action{
         actor.attemptsTo(
                 Enter.theValue(username).into(LoginPage.USERNAME_FIELD),
                 Enter.theValue(password).into(LoginPage.PASSWORD_FIELD),
+                Scroll.to(LoginPage.LOGIN_BUTTON),
                 Click.on(LoginPage.LOGIN_BUTTON)
         );
 

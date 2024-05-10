@@ -1,12 +1,10 @@
 package screenplay.taks;
 
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Switch;
+import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import screenplay.user_interface.CreateNewUser;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Enter;
 import screenplay.utils.CONSTANST;
 
 import java.time.Duration;
@@ -36,15 +34,13 @@ public class RegisterNewUser implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
             actor.attemptsTo(
+                    Scroll.to(CreateNewUser.BTN_NEW_USER),
                     Click.on(CreateNewUser.BTN_NEW_USER),
                     Enter.theValue(firstName).into(CreateNewUser.FIELD_FIRSTNAME),
                     Enter.theValue(lastName).into(CreateNewUser.FIELD_LASTANAME),
                     Enter.theValue(user).into(CreateNewUser.FIELD_USER),
-                    Enter.theValue(pass).into(CreateNewUser.FIELD_PASSWORD),
-                    waiting(CONSTANST.TIME_CAPTACHA),
-                    Click.on(CreateNewUser.BTN_REGISTER),
-                    WaitUntil.the(alertIsPresent()).forNoMoreThan(Duration.ofSeconds(10)),
-                    Switch.toAlert().andAccept()
-            );
+                    Enter.theValue(pass).into(CreateNewUser.FIELD_PASSWORD));
+                    waiting(CONSTANST.TIME_CAPTACHA);
+
     }
 }

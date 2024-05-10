@@ -7,27 +7,22 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import screenplay.taks.AddBook;
 import screenplay.taks.OpenLoginPage;
-import screenplay.taks.RegisterNewUser;
-import screenplay.taks.SelectAlertNewUser;
-import screenplay.user_interface.CreateNewUser;
 @RunWith(SerenityRunner.class)
-public class CreaterUserTest {
+public class AddBookTest {
 
     private WebDriver driver;
 
     private Actor user = Actor.named("User");
 
     @Test
-    public void createrUserTest(){
+    public void addBook(){
         driver = new ChromeDriver();
         user.can(BrowseTheWeb.with(driver));
         user.attemptsTo(
-                 OpenLoginPage.loginPage(),
-                 RegisterNewUser.registerNewUser("Test03", "Test03","test025", "Test2026*"),
-                 SelectAlertNewUser.selectAlertNewUser()
-         );
-
+                OpenLoginPage.loginPage(),
+                AddBook.addBook("Programming JavaScript Applications")
+        );
     }
-
 }
