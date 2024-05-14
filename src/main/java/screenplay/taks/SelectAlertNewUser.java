@@ -27,7 +27,7 @@ public class SelectAlertNewUser implements Task {
         actor.attemptsTo(
                 Scroll.to(CreateNewUser.BTN_REGISTER),
                 Click.on(CreateNewUser.BTN_REGISTER),
-                WaitUntil.the(alertIsPresent()).forNoMoreThan(Duration.ofSeconds(10)),
+                WaitUntil.the(alertIsPresent()).forNoMoreThan(Duration.ofSeconds(15)),
                 Switch.toAlert().andAccept()
         );
     }

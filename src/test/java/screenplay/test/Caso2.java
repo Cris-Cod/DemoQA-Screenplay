@@ -9,18 +9,22 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import screenplay.taks.OpenLoginPage;
-import screenplay.taks.RegisterNewUser;
-import screenplay.taks.SelectAlertNewUser;
+import screenplay.taks.*;
 
 @RunWith(SerenityParameterizedRunner.class)
 @UseTestDataFrom(value = "testdata/testcaso2.csv")
 public class Caso2 {
 
     private String firstname;
-    private String lastname;
+    private String lastnameUser;
     private String userName;
     private String password;
+    private String first_name;
+    private String last_Name;
+    private String email;
+    private String mobile;
+    private String subjects;
+    private String current_Address;
 
     private WebDriver driver;
 
@@ -34,8 +38,12 @@ public class Caso2 {
         driver.manage().window().maximize();
         user.attemptsTo(
                 OpenLoginPage.loginPage(),
-                RegisterNewUser.registerNewUser(firstname,lastname,userName,password),
-                SelectAlertNewUser.selectAlertNewUser()
+                RegisterNewUser.registerNewUser(firstname,lastnameUser,userName,password),
+                SelectAlertNewUser.selectAlertNewUser(),
+                SelectFrames.selectFrames(),
+                FillForms.fillForms(first_name,last_Name,email,mobile,subjects,current_Address),
+                DeleteUserCase2.deleteUserCase2(userName,password),
+                ValidateLoginUser.validateLoginUser(userName,password)
         );
     }
 
