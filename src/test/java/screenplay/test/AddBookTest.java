@@ -7,8 +7,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import screenplay.taks.AddBook;
+import screenplay.taks.AddBooks;
 import screenplay.taks.OpenLoginPage;
+
+
 @RunWith(SerenityRunner.class)
 public class AddBookTest {
 
@@ -20,9 +22,10 @@ public class AddBookTest {
     public void addBook(){
         driver = new ChromeDriver();
         user.can(BrowseTheWeb.with(driver));
+        driver.manage().window().maximize();
         user.attemptsTo(
                 OpenLoginPage.loginPage(),
-                AddBook.addBook("Programming JavaScript Applications")
+                AddBooks.addBooks("Programming JavaScript Applications")
         );
     }
 }

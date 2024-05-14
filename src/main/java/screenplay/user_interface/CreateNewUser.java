@@ -13,4 +13,5 @@ public class CreateNewUser {
     public static final Target FIELD_USER = Target.the("field user").located(By.id("userName"));
     public static final Target FIELD_PASSWORD = Target.the("field user").located(By.id("password"));
     public static final Target BTN_REGISTER = Target.the("field user").located(By.id("register"));
+    public static final Target BTN_BACK_TO_LOGIN = Target.the("back to login").located(By.id("gotologin"));
 }

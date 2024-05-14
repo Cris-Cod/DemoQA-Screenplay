@@ -9,17 +9,18 @@ import screenplay.user_interface.AddBookLocators;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class AddBook implements Task {
+public class AddBooks implements Task {
 
     private final String book;
 
-    public AddBook(String book) {
+    public AddBooks(String book) {
         this.book = book;
     }
 
-    public static AddBook addBook(String nameBook){
-        return instrumented(AddBook.class, nameBook);
+    public static AddBooks addBooks(String nameBook){
+        return instrumented(AddBooks.class, nameBook);
     }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
