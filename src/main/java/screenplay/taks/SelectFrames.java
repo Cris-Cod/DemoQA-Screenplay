@@ -33,8 +33,8 @@ public class SelectFrames implements Task {
         actor.attemptsTo(
                 Click.on(AlertsLocators.BTN_ALERTS_FRAMES),
                 Click.on(AlertsLocators.BTN_NESTED_FRAMES),
-                Switch.toFrame(4),
-                Switch.toFrame(15),
+                Switch.toFrame("frame1"),
+                Switch.toFrame(0),
                 Switch.toDefaultContext()
         );
 

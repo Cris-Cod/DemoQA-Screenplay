@@ -60,10 +60,8 @@ _
 b
 2src/main/java/screenplay/actions/IteratorBook.java,9\e\9e3ebce005e107500e520ee1ffbbf68303037018
 b
-2src/main/java/screenplay/questions/TextFrames.java,f\5\f54e05ace95d4054b73090b6ef72ab3d3979efa3
-b
 2src/main/java/screenplay/utils/TextOfLocators.java,f\c\fc952410ba659f68129f2769ed4f4131dd9f55d6
-i
-9src/main/java/screenplay/user_interface/FormLocators.java,0\d\0db8bbc2e01bbae1be3b83076ae10f09668115e5
 j
 :src/main/java/screenplay/user_interface/FormsLocators.java,0\a\0a1e96dc92cb6865de9ecf96e2e8c8ecc7dbaf3e
+\
+,src/main/java/screenplay/taks/FillForms.java,b\d\bd80eaf81c4c75f218baf02c760c814ab8ddb772

@@ -1,5 +1,23 @@
 
 Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö†ò–8ÅÝ°¢÷1J$a43ab57f-33e6-43fd-8eea-a2d9ba23ae97
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö†ò–8áäÂÌ÷1J$59e9f06a-beab-452b-ae0e-86b639831f1d
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(àÙêÑþÿÿÿÿ8ˆÞÎ÷1J$ba1152c2-eb79-4344-8345-4eca32c546fa
+j
+java:S1128"HRemove this unused import 'net.serenitybdd.core.pages.WebElementFacade'.(á¢èÞúÿÿÿÿ8¢èÌÏ÷1
+p
+java:S1128"NRemove this unused import 'net.serenitybdd.screenplay.abilities.BrowseTheWeb'.(æÙ›Íøÿÿÿÿ8¢èÌÏ÷1
+h
+java:S1128	"FRemove this unused import 'net.serenitybdd.screenplay.questions.Text'.(ùŠ¨ÿÿÿÿÿ8£èÌÏ÷1
+h
+java:S1128
+"FRemove this unused import 'net.serenitybdd.screenplay.targets.Target'.(Ä¡í¹ÿÿÿÿÿ8£èÌÏ÷1
+P
+java:S1128"3Remove this unused import 'org.openqa.selenium.By'.(ÿŠÞ›8£èÌÏ÷1
+]
+java:S1128";Remove this unused import 'org.openqa.selenium.WebElement'.(‰ïµ”þÿÿÿÿ8£èÌÏ÷1
+c
+java:S1128"FRemove this unused import 'screenplay.user_interface.AddBookLocators'.(¥ÃØ…8£èÌÏ÷1
+^
+java:S1128"<Remove this unused import 'screenplay.utils.TextOfLocators'.(†×Ôçþÿÿÿÿ8£èÌÏ÷1
 v
-java:S1068".Remove this unused "textIframe" private field.(áðÉ´þÿÿÿÿ8ÉÝ°¢÷1J$e7435383-6a8b-4372-ba24-86223ca23730
+java:S1068".Remove this unused "textIframe" private field.(áðÉ´þÿÿÿÿ8çäÂÌ÷1J$24377e0e-a5ec-48f4-becb-18099a2c5076
