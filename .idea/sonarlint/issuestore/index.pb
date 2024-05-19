@@ -65,3 +65,7 @@ j
 :src/main/java/screenplay/user_interface/FormsLocators.java,0\a\0a1e96dc92cb6865de9ecf96e2e8c8ecc7dbaf3e
 \
 ,src/main/java/screenplay/taks/FillForms.java,b\d\bd80eaf81c4c75f218baf02c760c814ab8ddb772
+b
+2src/main/java/screenplay/taks/DeleteUserCase2.java,c\a\caf3d07bb282b63bcd1070a723d2b3d8f5a6eced
+d
+4src/main/java/screenplay/taks/ValidateLoginUser.java,3\f\3f5a1963e7767ecb7f89cfc96ff53d2d9aa88c6a

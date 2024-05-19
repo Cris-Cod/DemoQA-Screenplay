@@ -9,8 +9,8 @@ import screenplay.user_interface.LoginPage;
 
 public class TextOfLocators {
 
-    public static String textParentIframe(Actor actor){
-        return BrowseTheWeb.as(actor).find(AlertsLocators.IFRAME_PARENT).getText();
+    public static Question<String> textParentIframe(){
+        return actor -> TextContent.of(AlertsLocators.IFRAME_PARENT).answeredBy(actor);
     }
 
     /*public static String textChildtIframe(Actor actor){

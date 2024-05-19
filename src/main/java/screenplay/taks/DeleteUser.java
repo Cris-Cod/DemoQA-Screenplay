@@ -4,6 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import screenplay.user_interface.CreateNewUser;
@@ -13,6 +14,7 @@ import screenplay.user_interface.LoginPage;
 import java.time.Duration;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent;
 
 public class DeleteUser implements Task {
@@ -36,7 +38,10 @@ public class DeleteUser implements Task {
                 Click.on(CreateNewUser.BTN_BACK_TO_LOGIN),
                 Enter.theValue(username).into(LoginPage.USERNAME_FIELD),
                 Enter.theValue(password).into(LoginPage.PASSWORD_FIELD),
+                Scroll.to(LoginPage.LOGIN_BUTTON),
                 Click.on(LoginPage.LOGIN_BUTTON),
+                WaitUntil.the(HomeLoginLocators.BTN_DELETE_ACCOUNT, isVisible()).forNoMoreThan(10).seconds(),
+                Scroll.to(HomeLoginLocators.BTN_DELETE_ACCOUNT),
                 Click.on(HomeLoginLocators.BTN_DELETE_ACCOUNT),
                 Click.on(HomeLoginLocators.MODAL_DELETE),
                 WaitUntil.the(alertIsPresent()).forNoMoreThan(Duration.ofSeconds(10)),

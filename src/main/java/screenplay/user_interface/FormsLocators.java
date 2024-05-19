@@ -18,14 +18,20 @@ public class FormsLocators {
     public static final Target SELECT_MONTH  = Target.the("select month").located(By.xpath("//select[@class='react-datepicker__month-select']"));
     public static final Target SELECT_YEAR  = Target.the("select year").located(By.xpath("//select[@class='react-datepicker__year-select']"));
     public static final Target SELECT_DAY  = Target.the("select day").located(By.xpath("//div[@class='react-datepicker__day react-datepicker__day--023']"));
-    public static final Target INPUT_SUBJECT  = Target.the("input subject").located(By.id("subjectsContainer"));
-    public static final Target CHECKBOX  = Target.the("checkbox").located(By.id("hobbies-checkbox-1"));
+    public static final Target INPUT_SUBJECT  = Target.the("input subject").located(By.xpath("//div[@id='subjectsContainer']/div/div"));
+    public static final Target ENTER_SUBJECT = Target.the("enter subject").located(By.id("subjectsInput"));
+    public static final Target CHECKBOX  = Target.the("checkbox").located(By.cssSelector("label[for='hobbies-checkbox-1']"));
     public static final Target UPLOADPICTURE = Target.the("upload picture").located(By.id("uploadPicture"));
-    public static final Target TEXTAREA_ADDRESS = Target.the("textarea address").located(By.id("currentAddress-wrapper"));
+    public static final Target TEXTAREA_ADDRESS = Target.the("textarea address").located(By.id("currentAddress"));
     public static final Target SELECT_STATE = Target.the("select state").located(By.id("state"));
     public static final Target SELECT_STATE_OPTION = Target.the("select state option").located(By.id("react-select-3-option-2"));
     public static final Target SELECT_CITY = Target.the("select city").located(By.id("city"));
     public static final Target SELECT_CITY_OPTION = Target.the("select city option").located(By.id("react-select-4-option-0"));
     public static final Target BTN_SUBMIT = Target.the("button submit").located(By.id("submit"));
+    public static final Target BTN_CLOSE = Target.the("Button close").located(By.id("closeLargeModal"));
 
+    //closeLargeModal
+
+    //class-subjects-auto-complete__input
+    //id--react-select-2-option-1
 }

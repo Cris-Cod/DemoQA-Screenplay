@@ -3,11 +3,14 @@ package screenplay.taks;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.openqa.selenium.Keys;
 import screenplay.user_interface.FormsLocators;
 
 import java.nio.file.Path;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 
 public class FillForms implements Task {
@@ -49,7 +52,10 @@ public class FillForms implements Task {
                 SelectFromOptions.byVisibleText("June").from(FormsLocators.SELECT_MONTH),
                 SelectFromOptions.byValue("1997").from(FormsLocators.SELECT_YEAR),
                 Click.on(FormsLocators.SELECT_DAY),
-                Enter.theValue(subjects).into(FormsLocators.INPUT_SUBJECT),
+                //WaitUntil.the(FormsLocators.INPUT_SUBJECT, isVisible()),
+                Click.on(FormsLocators.INPUT_SUBJECT),
+                Enter.theValue(subjects).into(FormsLocators.ENTER_SUBJECT),
+                SendKeys.of(Keys.ENTER).into(FormsLocators.ENTER_SUBJECT),
                 Click.on(FormsLocators.CHECKBOX),
                 Upload.theFile(path).to(FormsLocators.UPLOADPICTURE),
                 Enter.theValue(address).into(FormsLocators.TEXTAREA_ADDRESS),
@@ -57,7 +63,8 @@ public class FillForms implements Task {
                 Click.on(FormsLocators.SELECT_STATE_OPTION),
                 Click.on(FormsLocators.SELECT_CITY),
                 Click.on(FormsLocators.SELECT_CITY_OPTION),
-                Click.on(FormsLocators.BTN_SUBMIT)
+                Click.on(FormsLocators.BTN_SUBMIT),
+                Click.on(FormsLocators.BTN_CLOSE)
         );
     }
 }
